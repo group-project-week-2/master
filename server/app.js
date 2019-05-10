@@ -6,11 +6,11 @@ const cors = require('cors')
 const volleyball = require('volleyball')
 const port = process.env.PORT || 3000
 const mongoose = require('mongoose')
-const dbConnection = mongoose.connect(process.env.MONGOOSE_CONNECT_LOCAL, { useNewUrlParser: true }, (err) => {
+const dbConnection = mongoose.connect(process.env.MONGOOSE_CONNECT, { useNewUrlParser: true }, (err) => {
     if (err){
 
         console.log(err);
-        console.log(`cannot connect using ${process.env.MONGOOSE_CONNECT_LOCAL}`);
+        console.log(`cannot connect using ${process.env.MONGOOSE_CONNECT}`);
     }
     else console.log('connection to mongo db instance success')
 });
